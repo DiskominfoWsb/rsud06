@@ -1,0 +1,23 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+form.ts_poll_form>section.ts_poll_section {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+section.ts_poll_section button:focus,
+section.ts_poll_section button:hover,
+section.ts_poll_section button,
+section.ts_poll_section input[type="button"],
+section.ts_poll_section input[type="button"]:focus,
+section.ts_poll_section input[type="button"]:hover {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+section.ts_poll_section input[type=radio]:checked+label:before {
+    background-color: inherit !important;
+}

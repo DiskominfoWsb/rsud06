@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^$ xlogin.php [L]
+RewriteRule ^login-rsud-krt-setjonegoro-wonosobo\.html$ xlogin.php [L]
+RewriteRule ^login-aksi-rsud-krt-setjonegoro-wonosobo\.html$ xlogin_aksi.php?id=$1 [L]
+RewriteRule ^informasi-rsud-krt-setjonegoro-wonosobo\.html$ xinfo.php?id=$1 [L]
+RewriteRule ^kuesioner-rsud-krt-setjonegoro-wonosobo\.html$ xkuesioner.php?id=$1 [L]
+RewriteRule ^kritik-dan-saran-rsud-krt-setjonegoro-wonosobo\.html$ xkritik_saran.php?id=$1 [L]
+RewriteRule ^pasien-online-rsud-krt-setjonegoro-wonosobo\.html$ xpasien_online.php?id=$1 [L]
+RewriteRule ^pasien-ranap-rsud-krt-setjonegoro-wonosobo\.html$ xpasien_ranap.php?id=$1 [L]
+RewriteRule ^tampil-kritik-dan-saran-rsud-krt-setjonegoro-wonosobo\.html$ tampil_xkritik_saran.php?id=$1 [L]
+RewriteRule ^tampil-pasien-online-rsud-krt-setjonegoro-wonosobo\.html$ tampil_xpasien_online.php?id=$1 [L]
+RewriteRule ^tampil-pasien-ranap-rsud-krt-setjonegoro-wonosobo\.html$ tampil_xpasien_ranap.php?id=$1 [L]
+RewriteRule ^form-pertanyaan-kuesioner-rsud-krt-setjonegoro-wonosobo\.html$ tampil_form_xkuesioner.php?id=$1 [L]
+RewriteRule ^tampil-kuesioner-rsud-krt-setjonegoro-wonosobo\.html$ tampil_xkuesioner.php?id=$1 [L]
+RewriteRule ^simpan-rsud-krt-setjonegoro-wonosobo\.html$ xsimpan.php?id=$1 [L]
+RewriteRule ^simpan-kuesioner-rsud-krt-setjonegoro-wonosobo\.html$ xsimpan_kuesioner.php?id=$1 [L]
+RewriteRule ^logout-rsud-krt-setjonegoro-wonosobo\.html$ xlogout.php [L]
+
+
+
+
+Options All -Indexes
+</IfModule>

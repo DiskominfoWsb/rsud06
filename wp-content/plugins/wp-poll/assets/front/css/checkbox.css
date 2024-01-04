@@ -1,0 +1,152 @@
+.liquidpoll-custom h2 {
+    font-size: 3em;
+    font-weight: 300;
+    padding: 0 0 0.5em;
+    margin: 0 0 30px;
+}
+
+.liquidpoll-custom ul,
+.liquidpoll-custom ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.liquidpoll-custom li {
+    margin: 0 auto;
+    padding: 2em 0;
+    position: relative;
+}
+
+.liquidpoll-custom label {
+    display: block;
+    position: relative;
+    padding: 0 0 0 65px;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.liquidpoll-custom input[type="checkbox"],
+.liquidpoll-custom input[type="radio"],
+.liquidpoll-custom label::before {
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.liquidpoll-custom input[type="checkbox"],
+.liquidpoll-custom input[type="radio"] {
+    opacity: 0;
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+}
+
+.liquidpoll-custom label::before {
+    content: '';
+    border: 4px solid #ddd;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.liquidpoll-radio label::before {
+    border-radius: 50%;
+}
+
+/* General SVG and path styles */
+
+.liquidpoll-custom svg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 6px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.liquidpoll-custom svg path {
+    stroke: #4CAF50;
+    stroke-width: 13px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* Circle */
+.liquidpoll-circle input[type="checkbox"],
+.liquidpoll-circle input[type="radio"],
+.liquidpoll-circle label::before {
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    position: absolute;
+}
+
+.liquidpoll-circle label::before {
+    background-color: #ddd;
+    border: none;
+}
+
+.liquidpoll-circle svg {
+    width: 56px;
+    height: 56px;
+    left: 27px;
+}
+
+.liquidpoll-circle svg path {
+    stroke-width: 5px;
+}
+
+/* Box Fill */
+.liquidpoll-boxfill svg path {
+    stroke-width: 8px;
+}
+
+/* Swirl */
+.liquidpoll-swirl svg path {
+    stroke-width: 8px;
+}
+
+/* List */
+.liquidpoll-list ol {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.liquidpoll-list ol li {
+    font-size: 2em;
+    padding: 1em 1em 0 2em;
+    text-indent: -40px;
+}
+
+.liquidpoll-list ol li label {
+    font-size: 1em;
+    text-indent: 0;
+    padding-left: 30px;
+}
+
+.liquidpoll-list label::before {
+    display: none;
+}
+
+.liquidpoll-list svg {
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 1.2em;
+    margin-top: 0;
+}
+
+.liquidpoll-list svg path {
+    stroke-width: 4px;
+}

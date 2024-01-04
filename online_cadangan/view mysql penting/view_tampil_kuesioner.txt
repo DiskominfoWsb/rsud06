@@ -1,0 +1,10 @@
+SELECT m.no_rm,m.Nama,
+SUM(CASE WHEN nilai_jawaban='1' THEN 1 ELSE 0 END) AS puas,
+SUM(CASE WHEN nilai_jawaban='0' THEN 1 ELSE 0 END) AS tidak_puas,
+j.tanggal,
+(SELECT  master_induk FROM ws_pelayanan_master_umum WHERE id_pelayanan_master_umum=k.id_pelayanan_master_umum) AS unit,
+(SELECT  sub_master FROM ws_pelayanan_master_umum WHERE id_pelayanan_master_umum=k.id_pelayanan_master_umum) AS sub_unit
+
+ FROM ws_pelayanan_responden_jawaban_kuesioner AS j 
+LEFT JOIN user_sms AS m ON j.norm=m.no_rm LEFT JOIN rajal_pelayanan_master_kuesioner AS k ON j.id_master_kuesioner=k.id_master_kuesioner
+GROUP BY j.tanggal,k.id_pelayanan_master_umum ORDER BY j.tanggal DESC 
